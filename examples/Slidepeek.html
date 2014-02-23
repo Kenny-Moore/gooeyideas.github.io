@@ -23,7 +23,7 @@ padding-left: 15px;
 			.modal-dialog { width: 600px; margin: 30px auto; }
 		}
             /* pull down is a translate3d y position */
-			.Breakpoint .uxSlider-back .colBack > p:before {
+			.uxGrid-Row.Breakpoint .uxSlider-back .colBack > p:before {
 				z-index: 5;
 				color: #FFF;
 				position: relative;
@@ -120,6 +120,28 @@ padding-left: 15px;
 			width: 14px;
 			margin-right: 18px;
 			text-align: center;
+			color: #aaa;
+			vertical-align: middle;
+		}
+		.uxSlider .colFront:nth-of-type(1) > p:before {
+			content: "Name: ";
+			white-space:pre;
+			display: inline-block;
+			font-style: normal;
+			font-weight: normal;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			color: #aaa;
+			vertical-align: middle;
+		}
+		.uxSlider .colFront:nth-of-type(2) > p:before {
+			content: "Location: ";
+			white-space:pre;
+			display: inline-block;
+			font-style: normal;
+			font-weight: normal;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
 			color: #aaa;
 			vertical-align: middle;
 		}
