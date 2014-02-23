@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pull-to-Refresh</title>
+    <title>Gooey Slide Grid</title>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://ux.ungerboeck.com/IconFont/css/font-usi.css" rel="stylesheet">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <style>
@@ -19,11 +18,27 @@ padding-right: 15px;
 padding-left: 15px;
 }
 		.col-group { height: 50px; }
-		.modal-dialog { margin: 15px; overflow: hidden;}
+		.modal-dialog { margin: 0px; overflow: hidden; border-right: 1px solid #AAA;}
 		@media (min-width: 768px){
 			.modal-dialog { width: 600px; margin: 30px auto; }
 		}
             /* pull down is a translate3d y position */
+			.Breakpoint .uxSlider-back .colBack > p:before {
+				z-index: 5;
+				color: #FFF;
+				position: relative;
+			}
+			.uxGrid-Row.Breakpoint:before {
+				background: #aaa;
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 20px;
+				z-index: 1;
+				border: 1px solid #FFF;
+			}
         .uxSlider {
             position: relative;
 			-o-transition: -o-transform .1s linear;
@@ -79,9 +94,9 @@ padding-left: 15px;
 			margin-bottom: 7px;
 		}
 		.uxSlider-back .colBack:nth-of-type(1) > p:before {
-			content: '\f095';
+			content: "\e182";
 			display: inline-block;
-			font-family: USI_IconFont;
+			font-family: 'Glyphicons Halflings';
 			font-style: normal;
 			font-weight: normal;
 			line-height: 1;
@@ -94,9 +109,9 @@ padding-left: 15px;
 			vertical-align: middle;
 		}
 		.uxSlider-back .colBack:nth-of-type(2) > p:before {
-			content: '\f0e0';
+			content: "\2709";
 			display: inline-block;
-			font-family: USI_IconFont;
+			font-family: 'Glyphicons Halflings';
 			font-style: normal;
 			font-weight: normal;
 			line-height: 1;
