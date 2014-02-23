@@ -85,7 +85,6 @@ padding-left: 15px;
 		}
 		.uxSlider {
 			background: #f7f7f7;  z-index: 1;
-			border-right: 1px solid #aaa;
 			border-left: 1px solid #aaa;
 			margin-left: 20px;
 		}
@@ -981,7 +980,7 @@ padding-left: 15px;
         function Main(container, slidebox, slidebox_icon, handler) {
             var self = this;
 
-            this.breakpoint = 250;
+            this.breakpoint = 50;
 
             this.container = container;
             this.slidebox = slidebox;
@@ -993,7 +992,7 @@ padding-left: 15px;
             this._dragged_right = false;
 
             this.hammertime = Hammer(this.container)
-                .on("touch dragright dragend release tap", function(ev) {
+                .on("touch dragright dragleft dragend release tap", function(ev) {
                     self.handleHammer(ev);
                 });
         };
@@ -1019,11 +1018,17 @@ padding-left: 15px;
 						this._dragged_right = true;
 						cancelAnimationFrame(this._anim);
 						$(this.slidebox_icon).addClass('Breakpoint-Lock Breakpoint');
-						this.setWidth(250);
+						this.setWidth(200);
 					}
 					
                     break;
-				case 'touch':
+				case 'dragleft':
+					$(this.container).removeClass('onSlide');
+                    if(!this._dragged_right) {
+                        return;
+                    } else {
+                        this.hide();
+                    }
                     
 					
 					
@@ -1031,7 +1036,7 @@ padding-left: 15px;
 
                 // on release we check how far we dragged
                 case 'dragend':
-				$(this.container).removeClass('onSlide');
+					$(this.container).removeClass('onSlide');
                     if(!this._dragged_right) {
                         return;
                     }
@@ -1043,7 +1048,7 @@ padding-left: 15px;
                     // over the breakpoint, trigger the callback
                     if(ev.gesture.deltaX >= this.breakpoint) {
                         $(this.slidebox_icon).addClass('Breakpoint-Lock');
-                        this.setWidth(250);
+                        this.setWidth(200);
                         //this.handler.call(this);
                     }
                     // just hide it
