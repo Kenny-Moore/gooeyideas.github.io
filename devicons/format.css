@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+	background-color: rgba(#efefef, 0.25);
+}
+
+header {
+	border-top: 1rem solid #EC6635;
+}
+
+nav {
+	padding: 1rem;
+	padding-bottom: 2rem;
+	margin: 0;
+	text-align: center;
+}
+
+a {
+	font-size: 2rem;
+	font-family: "freight-sans-pro",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	color: #E05130;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #EC6635;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: -2rem;
+	letter-spacing:normal;
+	font-size:500px;
+	line-height:0;
+
+
+}
+h2 {
+	font-size: 12em;
+	text-align: center;
+	margin: 2rem;
+	margin-bottom: 5rem;
+}

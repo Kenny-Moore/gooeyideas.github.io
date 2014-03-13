@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<title>Devicons</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="format.css" />
+<style>
+.icon {
+    font-family: 'devicons';
+	-webkit-font-feature-settings: "liga","dlig";
+	-moz-font-feature-settings: "liga=1, dlig=1";
+	-moz-font-feature-settings: "liga","dlig";
+	-ms-font-feature-settings: "liga","dlig";
+	-o-font-feature-settings: "liga","dlig";
+	font-feature-settings: "liga","dlig";
+	text-rendering: optimizeLegibility;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    line-height: 0;
+    -webkit-font-smoothing: antialiased;
+    white-space:pre;
+    margin-top: .5em;
+    height: .5em;
+    width: 1em;
+}
+.icon:before { line-height: 0px; }
+
+.icon-color-html { color: #E05130; }
+.icon-color-html:first-line { color: #EAEAEB; }
+.icon-color-html:after { content: "\ahtmlfront"; color: #EC6635; }
+.icon-color-html:before { content: "htmlback\ahtml"; }
+
+.icon-color-require { color: #ED493D; }
+.icon-color-require:first-line { color: #4D9DD3; }
+.icon-color-require:after { content: "\arequirefront"; color: #F0E733; }
+.icon-color-require:before { content: "requireback\arequire"; }
+
+</style>
+<body>
+    <h2>My Example:</h2>
+    <div style="font-size: 100px; text-align:center;">
+        <span><i class="icon icon-color-html"></i><i class="icon icon-color-require"></i><span>This is a test</span><span class="icon-require">require</span><span class="icon-html">html</span></span>
+	</div>
+</body>
+</html>
