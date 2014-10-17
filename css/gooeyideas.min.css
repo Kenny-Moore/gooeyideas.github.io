@@ -123,6 +123,14 @@
   background-position: 0 0;
   background-color: #222;
 }
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
 @keyframes shimmer {
   0% {
     background-position: top left;
