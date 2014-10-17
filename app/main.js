@@ -5,6 +5,7 @@
         'plugins' : '../lib/durandal/js/plugins',
         'transitions' : '../lib/durandal/js/transitions',
         'knockout': '../lib/knockout/knockout-3.1.0',
+        'moment': '../lib/moment/moment',
         'bootstrap': '../lib/bootstrap/js/bootstrap',
         'jquery': '../lib/jquery/jquery-1.9.1'
     },
@@ -21,7 +22,7 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator'],  function (s
     system.debug(true);
     //>>excludeEnd("build");
 
-    app.title = 'Durandal Starter Kit';
+    app.title = 'Gooey Ideas Proto Site';
 
     app.configurePlugins({
         router:true,
