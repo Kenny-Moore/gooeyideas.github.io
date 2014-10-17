@@ -1,0 +1,51 @@
+@import (reference) "./../lib/bootstrap/less/bootstrap.less";
+
+@font-face {
+  font-family: 'Lato';
+  src: url('http://fonts.googleapis.com/css?family=Lato:300');
+}
+
+//Gooey Mix-Ins!
+    .vendor(@prop, @args){ //Generic Vendor Prefixing Methods
+        -webkit-@{prop}: @args;
+           -moz-@{prop}: @args;
+                @{prop}: @args;
+    }
+    #gui-gradients{ // Gradient Mixin Library Included from "./../lib/bootstrap/less/mixins/gradients.less 
+        .horizontal-three-colors(@start-color; @mid-color; @color-stop; @end-color) {
+            #gradient.horizontal-three-colors(@start-color; @mid-color; @color-stop; @end-color);
+        }
+    }
+
+.gui{
+    .shimmer {
+            #gui-gradients.horizontal-three-colors(#225; #fff; 0.75; #322);
+            
+            .vendor(background-size; 100px 100%);
+            .vendor(background-clip; text);
+            .vendor(animation-name; shimmer);
+            .vendor(animation-duration; 4s);
+            .vendor(animation-iteration-count; infinite);
+          
+            font-family: "Lato";
+            font-weight: 300;
+            font-size: 3em;
+            margin: 0 auto;
+            margin-left: -140px;
+            padding: 0 140px 0; //Necessary for iteration delay :(
+            display: inline;
+            margin-bottom: 0;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-color: #222;
+        }
+    }
+@keyframes shimmer {
+  0%{
+    background-position: top left;
+  }
+
+  100%{
+    background-position: top right;
+  }
+}
