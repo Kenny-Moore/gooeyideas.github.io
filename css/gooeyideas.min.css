@@ -91,7 +91,7 @@
   font-family: 'Lato';
   src: url('http://fonts.googleapis.com/css?family=Lato:300');
 }
-.gui .shimmer {
+.gui-shimmer {
   background-image: -webkit-linear-gradient(left, #222255, #ffffff 0.75, #332222);
   background-image: -o-linear-gradient(left, #222255, #ffffff 0.75, #332222);
   background-image: linear-gradient(to right, #222255, #ffffff 0.75, #332222);
