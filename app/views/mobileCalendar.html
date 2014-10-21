@@ -1,0 +1,26 @@
+﻿<div class="iscroll-wrapper" data-bind=" css: 'mc-month-' + calendar.observe('M')()">
+        <div class="iscroll-scroller-header">
+            <div class="iscroll-header-week">
+                <div class="iscroll-header-month" data-bind="text: calendar.observe('MMMM, YYYY')"></div>
+                <!-- ko foreach: Array(7) -->
+                    <div class="iscroll-day"><span class="iscroll-date-name" data-bind="text: $root.calendar.weekday($index()).format('dd')"></span></div>
+                <!-- /ko -->
+            </div>
+        </div>
+        <div class="iscroll-scroller">
+            <!-- ko foreach: $root.calendar.render(6) -->
+                <div class="iscroll-week" data-bind="css: 'mc-month-' + $data.observe('M')() + ' mc-week-index-' + $data.weekIndex">
+                    <div class="iscroll-month" data-bind="text: $data.observe('MMMM, YYYY')"></div>
+                    <!-- ko foreach: Array(7) -->
+                    <div class="iscroll-day" data-bind="css: 'mc-month-' + $parent.weekday($index()).observe('M')()">
+                        <div class="iscroll-date-wrapper"><span class="iscroll-date" data-bind="text: $parent.weekday($index()).observe('D')()"></span></div>
+                        <span class="iscroll-date-name" data-bind="text: $parent.weekday($index()).observe('dd')()"></span>
+                        <!-- xko foreach: { data: weekDay.events, as: 'event' } -->
+                            <!-- span class="iscroll-event" data-bind="css: { 'has-event': true, 'event-start': event.start, 'event-end': event.end }, style: { color: event.color }"></!-->
+                        <!-- /xko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            <!-- /ko -->
+        </div>       
+</div>
